@@ -112,9 +112,13 @@ public class MyIrcBot extends PircBot {
             }
         }
 
+        if(message.contains("!slap")) {
+            sendMessage(channel, "I'm gonna slap the shit out of " + message.replace("!slap", "that fucker"));
+        }
+
         if (message.equalsIgnoreCase("list")) {
           sendMessage(channel, "parses: 'jenn, lead, sohrab, food, tier1, 3.0 ?8ball");
-          sendMessage(channel, "commands: !train !ryan !fake !cca !sharyn !aj !2.0 !wiki !fantasy");
+          sendMessage(channel, "commands: !train !ryan !fake !cca !sharyn !aj !2.0 !wiki !fantasy !slap");
         }
 
     }
