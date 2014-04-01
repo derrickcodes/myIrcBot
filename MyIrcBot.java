@@ -78,7 +78,7 @@ public class MyIrcBot extends PircBot {
 
         if (message.contains("?8ball")) {
             Random randomGenerator = new Random();
-            int randomInt = randomGenerator.nextInt(10);
+            int randomInt = randomGenerator.nextInt(11);
             switch(randomInt) {
                 case 1:
                     sendMessage(channel, "Violet likes that.");
@@ -107,18 +107,24 @@ public class MyIrcBot extends PircBot {
                 case 9:
                     sendMessage(channel, "NO!");
                     break;
+                case 10:
+                    sendMessage(channel, "Maybe.");
                 default:
-                    sendMessage(channel, "There's an error in my code if this line prints, tell dman!");
+                    sendMessage(channel, "There's an error in my switch code if this line prints, tell dman!");
             }
         }
 
         if(message.contains("!slap")) {
-            sendMessage(channel, "I'm gonna slap the shit out of " + message.replace("!slap", "that fucker"));
+            sendAction(channel, "slaps " + message.replace("!slap", "that fucker"));
+        }
+
+        if(message.contains("!kick")) {
+            sendAction(channel, "kicks " + message.replace("!kick", "that old fart") + " in the ass.");
         }
 
         if (message.equalsIgnoreCase("list")) {
           sendMessage(channel, "parses: 'jenn, lead, sohrab, food, tier1, 3.0 ?8ball");
-          sendMessage(channel, "commands: !train !ryan !fake !cca !sharyn !aj !2.0 !wiki !fantasy !slap");
+          sendMessage(channel, "commands: !train !ryan !fake !cca !sharyn !aj !2.0 !wiki !fantasy !slap !kick");
         }
 
     }
