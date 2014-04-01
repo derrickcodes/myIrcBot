@@ -23,7 +23,7 @@ public class MyIrcBot extends PircBot {
             sendMessage(channel, "I should be the lead, " + sender + "! I'm going to tell Ryan that too!");
         }
 
-        if (message.equalsIgnoreCase("!train")) {
+        if (message.contains("train")) {
             sendMessage(channel, "I want to be the only one who trains, so everyone learns to do things right.");
         }
 
@@ -32,7 +32,7 @@ public class MyIrcBot extends PircBot {
                     "I should do is talk over you.");
         }
 
-        if (message.equalsIgnoreCase("!ryan")) {
+        if (message.contains("ryan")) {
             sendMessage(channel, "Ryan is here!  I need to go to his office and make a big deal about this!");
         }
 
@@ -44,7 +44,7 @@ public class MyIrcBot extends PircBot {
             sendMessage(channel, "I'm going to use my sweetest voice while I say condescending things!");
         }
 
-        if (message.equalsIgnoreCase("!cca")) {
+        if (message.contains("cca")) {
             sendMessage(channel, "Ryan needs to help me reorganize the cca group. We did it better at AT&T!");
         }
 
@@ -52,11 +52,11 @@ public class MyIrcBot extends PircBot {
             sendMessage(channel, "I haven't eaten any cake since my little spawn was born.");
         }
 
-        if (message.equalsIgnoreCase("!sharyn")) {
+        if (message.contains("sharyn")) {
             sendMessage(channel, "I fucking hate that catty bitch Sharyn!  My asthma is legit!!");
         }
 
-        if (message.equalsIgnoreCase("!AJ")) {
+        if (message.contains("AJ")) {
             sendMessage(channel, "I can't believe they promoted AJ over me!");
         }
 
@@ -130,9 +130,13 @@ public class MyIrcBot extends PircBot {
             sendAction(channel, "sniffs " + message.replace("!sniff", "that smelly turd"));
         }
 
+        if(message.contains("!wink")) {
+            sendAction(channel, "winks " + message.replace("!wink", "at that cutie"));
+        }
+
         if (message.equalsIgnoreCase("list")) {
-          sendMessage(channel, "parses: 'jenn, lead, sohrab, food, tier1, 3.0 ?8ball");
-          sendMessage(channel, "commands: !train !ryan !fake !cca !sharyn !aj !2.0 !wiki !fantasy !slap !kick !sniff");
+          sendMessage(channel, "OH: 'jenn, lead, sohrab, food, tier1, 3.0 ?8ball, cca, train, ryan, sharyn, AJ");
+          sendMessage(channel, "commands: !fake !2.0 !wiki !fantasy !slap !kick !sniff !wink");
         }
 
     }
