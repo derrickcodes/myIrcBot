@@ -122,9 +122,13 @@ public class MyIrcBot extends PircBot {
             sendAction(channel, "kicks " + message.replace("!kick", "that old fart") + " in the ass.");
         }
 
+        if(message.contains("!sniff")) {
+            sendAction(channel, "sniffs " + message.replace("!sniff", "that smelly turd"));
+        }
+
         if (message.equalsIgnoreCase("list")) {
           sendMessage(channel, "parses: 'jenn, lead, sohrab, food, tier1, 3.0 ?8ball");
-          sendMessage(channel, "commands: !train !ryan !fake !cca !sharyn !aj !2.0 !wiki !fantasy !slap !kick");
+          sendMessage(channel, "commands: !train !ryan !fake !cca !sharyn !aj !2.0 !wiki !fantasy !slap !kick !sniff");
         }
 
     }
