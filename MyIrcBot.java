@@ -78,7 +78,7 @@ public class MyIrcBot extends PircBot {
 
         if (message.contains("?8ball")) {
             Random randomGenerator = new Random();
-            int randomInt = randomGenerator.nextInt(11);
+            int randomInt = randomGenerator.nextInt(12);
             switch(randomInt) {
                 case 1:
                     sendMessage(channel, "Violet likes that.");
@@ -109,6 +109,10 @@ public class MyIrcBot extends PircBot {
                     break;
                 case 10:
                     sendMessage(channel, "Maybe.");
+                    break;
+                case 11:
+                    sendMessage(channel, "Anyone can write the NOC, but not everyone is authorized to request things.");
+                    break;
                 default:
                     sendMessage(channel, "There's an error in my switch code if this line prints, tell dman!");
             }
