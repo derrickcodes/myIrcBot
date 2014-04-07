@@ -32,7 +32,7 @@ public class MyIrcBot extends PircBot {
                     "I should do is talk over you.");
         }
 
-        if (message.contains("ryan")) {
+        if (message.contains("!ryan")) {
             sendMessage(channel, "Ryan is here!  I need to go to his office and make a big deal about this!");
         }
 
@@ -40,15 +40,15 @@ public class MyIrcBot extends PircBot {
             sendMessage(channel, "Did someone say food?! I sure could use a 20 piece chicken McNuggets.");
         }
 
-        if (message.equalsIgnoreCase("!fake")) {
-            sendMessage(channel, "I'm going to use my sweetest voice while I say condescending things!");
+        if (message.contains("!fake")) {
+            sendMessage(channel, "I'm going to use my fakest sweetest voice while I say condescending things!");
         }
 
-        if (message.contains("cca")) {
+        if (message.contains("!cca")) {
             sendMessage(channel, "Ryan needs to help me reorganize the cca group. We did it better at AT&T!");
         }
 
-        if (message.equalsIgnoreCase("!2.0")) {
+        if (message.contains("!2.0")) {
             sendMessage(channel, "I haven't eaten any cake since my little spawn was born.");
         }
 
@@ -56,12 +56,12 @@ public class MyIrcBot extends PircBot {
             sendMessage(channel, "I fucking hate that catty bitch Sharyn!  My asthma is legit!!");
         }
 
-        if (message.contains("AJ")) {
+        if (message.contains("!AJ")) {
             sendMessage(channel, "I can't believe they promoted AJ over me!");
         }
 
-        if (message.contains("tier1")) {
-            sendMessage(channel, "I'm going to do everything a tier1 asks, maybe that will get me promoted!");
+        if (message.contains("!tier1")) {
+            sendMessage(channel, "I'm going to do everything any tier1 asks, maybe that will get me promoted!");
         }
 
         if (message.equalsIgnoreCase("!wiki")) {
@@ -72,7 +72,7 @@ public class MyIrcBot extends PircBot {
             sendMessage(channel, "My fantasy is to get naked with AJ, and to feed each other Cadbury cream eggs!");
         }
 
-        if (message.contains("3.0")) {
+        if (message.contains("!3.0")) {
             sendMessage(channel, "https://www.youtube.com/watch?v=DU4xW79ASsg");
         }
 
@@ -118,12 +118,16 @@ public class MyIrcBot extends PircBot {
             }
         }
 
+        if(message.contains("!highfive")) {
+            sendAction(channel, "highfives " + message.replace("!highfive", "that cool cat"));
+        }
+
         if(message.contains("!slap")) {
             sendAction(channel, "slaps " + message.replace("!slap", "that fucker"));
         }
 
         if(message.contains("!kick")) {
-            sendAction(channel, "kicks " + message.replace("!kick", "that old fart") + " in the ass.");
+            sendAction(channel, "kicks " + message.replace("!kick", "that old fart") + " in the shins.");
         }
 
         if(message.contains("!sniff")) {
@@ -134,9 +138,14 @@ public class MyIrcBot extends PircBot {
             sendAction(channel, "winks " + message.replace("!wink", "at that cutie"));
         }
 
-        if (message.equalsIgnoreCase("list")) {
-          sendMessage(channel, "OH: 'jenn, lead, sohrab, food, tier1, 3.0 ?8ball, cca, train, ryan, sharyn, AJ");
-          sendMessage(channel, "commands: !fake !2.0 !wiki !fantasy !slap !kick !sniff !wink");
+        if(message.contains("!shank")) {
+            sendAction(channel, "shanks " + message.replace("!shank", "that bastard"));
+        }
+
+        if (message.equalsIgnoreCase("!help")) {
+          sendMessage(channel, "OH: food, jenn, lead, sharyn, train");
+          sendMessage(channel, "commands: ?8ball !2.0 !3.0 !AJ !cca !fake !fantasy !help !highfive !kick !ryan !shank !slap" +
+                  " !sniff !sohrab !tier1 !wiki !wink");
         }
 
     }
