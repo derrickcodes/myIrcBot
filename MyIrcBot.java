@@ -102,7 +102,7 @@ public class MyIrcBot extends PircBot {
             int randomInt = randomGenerator.nextInt(12);
             switch(randomInt) {
                 case 1:
-                    sendMessage(channel, "Violet likes that.");
+                    sendMessage(channel, "Yes, Violet likes that.");
                     break;
                 case 2:
                     sendMessage(channel, "Is there bacon grease involved?");
