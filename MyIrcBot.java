@@ -78,6 +78,13 @@ public class MyIrcBot extends PircBot {
             sendMessage(channel, "RAWR!  I can eat this whole Vegas buffet in one sitting!!");
         }
 
+        if (message.equalsIgnoreCase("!help")) {
+            sendMessage(channel, "OH: food, jenn, lead, sharyn, sohrab, train");
+            sendMessage(channel, "requires (!): !8ball !2.0 !3.0 !AJ !cca !fake !fantasy !godzilla !help " +
+                    "!ryan !tier1 !wiki");
+            sendMessage(channel, "interactive: !goose !highfive !kick !punch !shank !slap");
+        }
+
         if (message.contains("!ryan")) {
             sendMessage(channel, "Ryan is here!  I need to go to his office and make a big deal about this!");
         }
@@ -136,11 +143,8 @@ public class MyIrcBot extends PircBot {
          * These are commands the bot will do interactively.  Like kicking someone in the channel
          * example: !kick <person> will result in the bot emoting it kicked <person>
          */
-
-        if (message.equalsIgnoreCase("!help")) {
-            sendMessage(channel, "OH: food, jenn, lead, sharyn, sohrab, train");
-            sendMessage(channel, "requires (!): !8ball !2.0 !3.0 !AJ !cca !fake !fantasy !godzilla !ryan !tier1 !wiki");
-            sendMessage(channel, "bot does: !help !highfive !kick, !shank, !slap, !sniff, !wink");
+        if(message.contains("!goose")) {
+            sendAction(channel, "gooses " + message.replace("!goose", "that cutie"));
         }
 
         if(message.contains("!highfive")) {
@@ -151,6 +155,10 @@ public class MyIrcBot extends PircBot {
             sendAction(channel, "kicks " + message.replace("!kick", "that old fart") + " in the shins.");
         }
 
+        if(message.contains("!punch")) {
+            sendAction(channel, "punches " + message.replace("!punch", "that smelly turd"));
+        }
+
         if(message.contains("!shank")) {
             sendAction(channel, "shanks " + message.replace("!shank", "that bastard"));
         }
@@ -159,13 +167,7 @@ public class MyIrcBot extends PircBot {
             sendAction(channel, "slaps " + message.replace("!slap", "that fucker"));
         }
 
-        if(message.contains("!sniff")) {
-            sendAction(channel, "sniffs " + message.replace("!sniff", "that smelly turd"));
-        }
 
-        if(message.contains("!wink")) {
-            sendAction(channel, "winks " + message.replace("!wink", "at that cutie"));
-        }
     } // end onMessage
 
     /**
