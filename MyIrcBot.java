@@ -144,7 +144,7 @@ public class MyIrcBot extends PircBot {
          * example: !kick <person> will result in the bot emoting it kicked <person>
          */
         if(message.contains("!goose")) {
-            sendAction(channel, "gooses " + message.replace("!goose", "that cutie"));
+            sendAction(channel, "gooses " + message.replace("!goose", "that cutie") + " and smiles coyly.");
         }
 
         if(message.contains("!highfive")) {
@@ -156,15 +156,15 @@ public class MyIrcBot extends PircBot {
         }
 
         if(message.contains("!punch")) {
-            sendAction(channel, "punches " + message.replace("!punch", "that smelly turd"));
+            sendAction(channel, "punches " + message.replace("!punch", "that douchewaffle") + " right in the throat!");
         }
 
         if(message.contains("!shank")) {
-            sendAction(channel, "shanks " + message.replace("!shank", "that bastard"));
+            sendAction(channel, "shanks " + message.replace("!shank", "that bastard") + " in the neck.");
         }
 
         if(message.contains("!slap")) {
-            sendAction(channel, "slaps " + message.replace("!slap", "that fucker"));
+            sendAction(channel, "slaps " + message.replace("!slap", "that fucker") + " hard!");
         }
 
 
