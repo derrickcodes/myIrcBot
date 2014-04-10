@@ -196,19 +196,4 @@ public class MyIrcBot extends PircBot {
         }
     } // end onKick
 
-    /**
-     * grants ops to ddog via private message request
-     * @param sender the user that sent the PM
-     * @param login unknown
-     * @param hostname unknown
-     * @param message the message sent by the user in the PM
-     */
-    public void onPrivateMessage(String sender, String login, String hostname, String message) {
-        if (sender.equals("ddog")) {
-            if (message.equals("opme")) {
-                this.op("sef-noc", "ddog");
-            }
-        }
-    } // end onPrivateMessage
-
 } // end class MyIrcBot
