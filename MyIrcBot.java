@@ -99,51 +99,57 @@ public class MyIrcBot extends PircBot {
         if (message.contains("!wiki")) {
             sendMessage(channel, "This is our best wiki page.  I wrote it.");
         }
-
-        if (message.contains("!ES")) {
-            Random randomGenerator = new Random();
-            int randomInt = randomGenerator.nextInt(12);
-            switch(randomInt) {
+      /**
+       * This works like an 8-ball.  You ask the ElephantSeal questions
+       * and it will answer with a random answer.  The question must begin
+       * with "!ES" and it must end with "?" or it won't work
+       */
+        if (message.startsWith("!ES")) {
+            if (message.endsWith("?")) {
+              Random randomGenerator = new Random();
+              int randomInt = randomGenerator.nextInt(12);
+              switch (randomInt) {
                 case 0:
-                    sendMessage(channel, "Did someone say cake?");
-                    break;
+                  sendMessage(channel, "Did someone say cake?");
+                  break;
                 case 1:
-                    sendMessage(channel, "Yes, Violet likes that.");
-                    break;
+                  sendMessage(channel, "Yes, Violet likes that.");
+                  break;
                 case 2:
-                    sendMessage(channel, "Is there bacon grease involved?");
-                    break;
+                  sendMessage(channel, "Is there bacon grease involved?");
+                  break;
                 case 3:
-                    sendMessage(channel, "Ryan likes it, so no.");
-                    break;
+                  sendMessage(channel, "Ryan likes it, so no.");
+                  break;
                 case 4:
-                    sendMessage(channel, "No.  That was in a Lamb of God song.");
-                    break;
+                  sendMessage(channel, "No.  That was in a Lamb of God song.");
+                  break;
                 case 5:
-                    sendMessage(channel, "Sharyn says no.  I say yes.  I know better.");
-                    break;
+                  sendMessage(channel, "Sharyn says no.  I say yes.  I know better.");
+                  break;
                 case 6:
-                    sendMessage(channel, "That's not how *I* would've asked that question.");
-                    break;
+                  sendMessage(channel, "That's not how *I* would've asked that question.");
+                  break;
                 case 7:
-                    sendMessage(channel, "Of course.");
-                    break;
+                  sendMessage(channel, "Of course.");
+                  break;
                 case 8:
-                    sendMessage(channel, "Are you crazy?!");
-                    break;
+                  sendMessage(channel, "Are you crazy?!");
+                  break;
                 case 9:
-                    sendMessage(channel, "NO!");
-                    break;
+                  sendMessage(channel, "NO!");
+                  break;
                 case 10:
-                    sendMessage(channel, "Maybe.");
-                    break;
+                  sendMessage(channel, "Maybe.");
+                  break;
                 case 11:
-                    sendMessage(channel, "Anyone can write the NOC, but not everyone is authorized to request things.");
-                    break;
+                  sendMessage(channel, "Anyone can write the NOC, but not everyone is authorized to request things.");
+                  break;
                 default:
-                    sendMessage(channel, "There's an error in my switch code if this line prints, tell dman!");
-            }
-        }
+                  sendMessage(channel, "There's an error in my switch code if this line prints, tell dman!");
+              } // end switch
+            } // end endsWith
+        } // end if-startsWith
 
         /**
          * These are commands the bot will do interactively.  Like kicking someone in the channel
