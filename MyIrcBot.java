@@ -85,7 +85,7 @@ public class MyIrcBot extends PircBot {
             sendMessage(channel, "OH: food, jenn, lead, sharyn, sohrab, train");
             sendMessage(channel, "requires (!): !2.0 !3.0 !AJ !cake !cca !ES !fake !fantasy !godzilla !help " +
                     "!ryan !tier1 !wiki");
-            sendMessage(channel, "interactive: !goose !highfive !kick !punch !shank !slap");
+            sendMessage(channel, "interactive: !fart !goose !highfive !kick !punch !shank !slap");
         }
 
         if (message.contains("!ryan")) {
