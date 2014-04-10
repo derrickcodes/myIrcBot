@@ -155,6 +155,9 @@ public class MyIrcBot extends PircBot {
          * These are commands the bot will do interactively.  Like kicking someone in the channel
          * example: !kick <person> will result in the bot emoting it kicked <person>
          */
+        if(message.contains("!fart")) {
+            sendAction(channel, "farts " + message.replace("!fart", "at the dbag"));
+        }
         if(message.contains("!goose")) {
             sendAction(channel, "gooses " + message.replace("!goose", "that cutie") + " and smiles coyly.");
         }
