@@ -185,8 +185,8 @@ public class MyIrcBot extends PircBot {
      * The bot will rejoin the channel if it is kicked out
      * @param channel sef-noc
      * @param kickerNick the person who kicked the bot out
-     * @param login unknown
-     * @param hostname unknown
+     * @param login unused
+     * @param hostname unused
      * @param recipientNick the victim who was kicked out (checks to see if it's self "the bot")
      * @param reason the reason given for kicking out the victim
      */
