@@ -36,8 +36,7 @@ public class MyIrcBot extends PircBot {
         }
 
         if (message.contains("sohrab")) {
-            sendMessage(channel, "Hey Sohrab, do you think I should call them?  Okay, whatever.  What *I* think " +
-                    "I should do is talk over you.");
+            sendMessage(channel, "Anything Sohrab can do, I can do better!  I can do anything better than him!");
         }
 
         if (message.contains("train")) {
@@ -51,7 +50,7 @@ public class MyIrcBot extends PircBot {
          * It does not have to be the first or only word in the sentence
          */
         if (message.contains("!2.0")) {
-            sendMessage(channel, "I haven't eaten any cake since my little spawn was born.");
+            sendMessage(channel, "http://i.imgur.com/frXVCPB.gif");
         }
 
         if (message.contains("!3.0")) {
@@ -60,6 +59,10 @@ public class MyIrcBot extends PircBot {
 
         if (message.contains("!AJ")) {
             sendMessage(channel, "I can't believe they promoted AJ over me!");
+        }
+
+        if (message.contains("!cake")) {
+            sendMessage(channel, "I haven't eaten cake since my little spawn was born.");
         }
 
         if (message.contains("!cca")) {
@@ -80,7 +83,7 @@ public class MyIrcBot extends PircBot {
 
         if (message.equalsIgnoreCase("!help")) {
             sendMessage(channel, "OH: food, jenn, lead, sharyn, sohrab, train");
-            sendMessage(channel, "requires (!): !8ball !2.0 !3.0 !AJ !cca !fake !fantasy !godzilla !help " +
+            sendMessage(channel, "requires (!): !2.0 !3.0 !AJ !cake !cca !ES !fake !fantasy !godzilla !help " +
                     "!ryan !tier1 !wiki");
             sendMessage(channel, "interactive: !goose !highfive !kick !punch !shank !slap");
         }
@@ -97,10 +100,13 @@ public class MyIrcBot extends PircBot {
             sendMessage(channel, "This is our best wiki page.  I wrote it.");
         }
 
-        if (message.contains("!8ball")) {
+        if (message.contains("!ES")) {
             Random randomGenerator = new Random();
             int randomInt = randomGenerator.nextInt(12);
             switch(randomInt) {
+                case 0:
+                    sendMessage(channel, "Did someone say cake?");
+                    break;
                 case 1:
                     sendMessage(channel, "Yes, Violet likes that.");
                     break;
@@ -167,7 +173,6 @@ public class MyIrcBot extends PircBot {
             sendAction(channel, "slaps " + message.replace("!slap", "that fucker") + " hard!");
         }
 
-
     } // end onMessage
 
     /**
@@ -186,13 +191,6 @@ public class MyIrcBot extends PircBot {
     } // end onKick
 
     /**
-     * The bot should rejoin the channel if it gets disconnected but hasn't quit running
-     */
-    public void onDisconnect() {
-        joinChannel("sef-noc", "acssucks");
-    }
-
-    /**
      * grants ops to ddog via private message request
      * @param sender the user that sent the PM
      * @param login unknown
@@ -202,9 +200,9 @@ public class MyIrcBot extends PircBot {
     public void onPrivateMessage(String sender, String login, String hostname, String message) {
         if (sender.equals("ddog")) {
             if (message.equals("opme")) {
-                op("sef-noc", "ddog");
+                this.op("sef-noc", "ddog");
             }
         }
-    }
+    } // end onPrivateMessage
 
 } // end class MyIrcBot
