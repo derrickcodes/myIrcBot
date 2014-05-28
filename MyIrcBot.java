@@ -32,7 +32,7 @@ public class MyIrcBot extends PircBot {
         }
 
         if (message.contains("sharyn")) {
-            sendMessage(channel, "I hate that catty Sharyn!  My asthma is legit!!");
+            sendMessage(channel, "I hate that catty cow Sharyn!  My asthma is legit!!");
         }
 
         if (message.contains("sohrab")) {
