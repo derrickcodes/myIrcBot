@@ -17,7 +17,7 @@ public class MyIrcBotMain {
         // connect to the irc server
         bot.connect("irc.freenode.net");
 
-        // join the #sef-noc channel (will fail)
+        // join the #constantbullshit channel
         bot.joinChannel("#constantbullshit", "inapb$");
 
      }
