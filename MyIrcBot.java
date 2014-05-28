@@ -152,7 +152,8 @@ public class MyIrcBot extends PircBot {
          * example: !kick <person> will result in the bot emoting it kicked <person>
          */
         if(message.contains("!fart")) {
-            sendAction(channel, "farts " + message.replace("!fart", "at the dbag"));
+          sendAction(channel, "farts " + message.replace("!fart", "at the dbag"));
+        }
 
         if(message.contains("!highfive")) {
             sendAction(channel, "highfives " + message.replace("!highfive", "that cool cat"));
