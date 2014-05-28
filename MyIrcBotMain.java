@@ -18,7 +18,7 @@ public class MyIrcBotMain {
         bot.connect("irc.freenode.net");
 
         // join the #sef-noc channel (will fail)
-        bot.joinChannel("#sef-noc", "acssucks");
+        bot.joinChannel("#constantbullshit", "inapb$");
 
      }
 }

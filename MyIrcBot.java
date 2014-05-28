@@ -28,11 +28,11 @@ public class MyIrcBot extends PircBot {
         }
 
         if (message.contains("lead")) {
-            sendMessage(channel, "I should be the lead, " + sender + "! I'm going to tell Ryan that too!");
+            sendMessage(channel, "I should be the lead, " + sender + "! I'm going to tell the boss that too!");
         }
 
         if (message.contains("sharyn")) {
-            sendMessage(channel, "I fucking hate that catty bitch Sharyn!  My asthma is legit!!");
+            sendMessage(channel, "I hate that catty Sharyn!  My asthma is legit!!");
         }
 
         if (message.contains("sohrab")) {
@@ -66,15 +66,11 @@ public class MyIrcBot extends PircBot {
         }
 
         if (message.contains("!cca")) {
-            sendMessage(channel, "Ryan needs to help me reorganize the cca group. We did it better at AT&T!");
+            sendMessage(channel, "Ryan needs to help me reorganize our group. We did it better at AT&T!");
         }
 
         if (message.contains("!fake")) {
-            sendMessage(channel, "I'm going to use my fakest sweetest voice while I say condescending things!");
-        }
-
-        if (message.contains("!fantasy")) {
-            sendMessage(channel, "My fantasy is to get naked with AJ, and to feed each other Cadbury cream eggs!");
+            sendMessage(channel, "I'm going to use my fake sweetest voice while I say condescending things!");
         }
 
         if (message.contains("!godzilla")) {
@@ -83,9 +79,9 @@ public class MyIrcBot extends PircBot {
 
         if (message.equalsIgnoreCase("!help")) {
             sendMessage(channel, "OH: food, jenn, lead, sharyn, sohrab, train");
-            sendMessage(channel, "requires (!): !2.0 !3.0 !AJ !cake !cca !ES !fake !fantasy !godzilla !help " +
+            sendMessage(channel, "requires (!): !2.0 !3.0 !AJ !cake !cca !ES !fake !godzilla !help " +
                     "!ryan !tier1 !wiki");
-            sendMessage(channel, "interactive: !fart !goose !highfive !kick !punch !shank !slap");
+            sendMessage(channel, "interactive: !fart !goose !highfive !kick !punch");
         }
 
         if (message.contains("!ryan")) {
@@ -174,13 +170,6 @@ public class MyIrcBot extends PircBot {
             sendAction(channel, "punches " + message.replace("!punch", "that douchewaffle") + " right in the throat!");
         }
 
-        if(message.contains("!shank")) {
-            sendAction(channel, "shanks " + message.replace("!shank", "that bastard") + " in the neck.");
-        }
-
-        if(message.contains("!slap")) {
-            sendAction(channel, "slaps " + message.replace("!slap", "that fucker") + " hard!");
-        }
 
     } // end onMessage
 
@@ -195,7 +184,7 @@ public class MyIrcBot extends PircBot {
      */
     public void onKick(String channel, String kickerNick, String login, String hostname, String recipientNick, String reason) {
         if (recipientNick.equalsIgnoreCase(getNick())) {
-            joinChannel("#sef-noc", "acssucks");
+            joinChannel("#constantbullshit", "inapb$");
         }
     } // end onKick
 
